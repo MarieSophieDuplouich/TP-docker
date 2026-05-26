@@ -9,10 +9,15 @@ La documentation du déploiement de l'application respecte souvent le même sch�
 
 Note : Documenter le déploiement d'une application est obligatoire pour le passage du titre DWWM (cf. REAC DWWM 2023)
 
-Prérequis (requirements)
+a-Prérequis (requirements)
 Node.js version 18 ou supérieure
 npm
-
+b- peut-être express par exemple
+c- run  
+1-npm install 
+2-app.js
+accéder
+localhost:3000
 ## TP1
 
 Message : {
