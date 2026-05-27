@@ -3,6 +3,11 @@ services:
     build: .
     ports:
       - "8083:80"
+    environment:
+      DATABASE_HOST: bdd
+      DATABASE_NAME: ma-bdd
+      DATABASE_USER: root
+      DATABASE_PASS: root
     volumes:
       - .:/var/www/html
     depends_on:
@@ -18,4 +23,3 @@ services:
 
 volumes:
   db-data:
-  

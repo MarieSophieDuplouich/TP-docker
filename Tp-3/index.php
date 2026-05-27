@@ -1,9 +1,9 @@
 <?php
 
-$DATABASE_HOST = "bdd";
-$DATABASE_NAME = "ma-bdd";
-$DATABASE_USER = "root";
-$DATABASE_PASS = "root";
+$DATABASE_HOST = getenv("DATABASE_HOST") ?: "bdd"; 
+$DATABASE_NAME = getenv("DATABASE_NAME") ?: "ma-bdd";
+$DATABASE_USER = getenv("DATABASE_USER") ?: "root";
+$DATABASE_PASS = getenv("DATABASE_PASS") ?: "root";
 $bdd = new PDO("mysql:host=$DATABASE_HOST;dbname=$DATABASE_NAME",$DATABASE_USER,$DATABASE_PASS);
 var_dump($bdd);
 ?>
