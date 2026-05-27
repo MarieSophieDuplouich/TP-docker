@@ -1,0 +1,25 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8083:80"
+    environment:
+      DATABASE_HOST: bdd
+      DATABASE_NAME: ma-bdd
+      DATABASE_USER: root
+      DATABASE_PASS: root
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - bdd
+
+  bdd:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ma-bdd
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
